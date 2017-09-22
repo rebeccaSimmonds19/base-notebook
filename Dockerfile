@@ -39,6 +39,7 @@ RUN yum install -y curl wget java-headless bzip2 gnupg2 sqlite3 \
 			    notebook \
 			    jupyter \
     && pip install widgetsnbextension \
+    && pip install plotly==2.0.12 \
     && yum erase -y gcc gcc-c++ glibc-devel \
     && yum clean all -y \
     && rm -rf /root/.npm \
