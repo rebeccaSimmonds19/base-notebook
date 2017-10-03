@@ -62,6 +62,10 @@ ENV SPARK_HOME /opt/spark
 
 RUN mkdir /notebooks && chown $NB_UID:root /notebooks && chmod 1777 /notebooks
 
+ADD WineMap.ipynb notebooks
+
+ADD wine_no_des.csv /data
+
 EXPOSE 8888
 
 RUN mkdir -p -m 700 /home/$NB_USER/.jupyter/ && \
