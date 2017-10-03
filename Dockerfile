@@ -64,7 +64,7 @@ RUN mkdir /notebooks && chown $NB_UID:root /notebooks && chmod 1777 /notebooks
 
 ADD WineMap.ipynb /notebooks
 
-ADD wine_no_des.csv /data
+ADD wine_no_des.csv /notebooks
 
 EXPOSE 8888
 
