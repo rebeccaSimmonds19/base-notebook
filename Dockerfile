@@ -67,6 +67,8 @@ ADD WineMap.ipynb /notebooks
 
 ADD wine_no_des.csv /notebooks
 
+ADD PostgresqlWineMap.ipynb /notebooks
+
 EXPOSE 8888
 
 RUN mkdir -p -m 700 /home/$NB_USER/.jupyter/ && \
