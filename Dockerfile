@@ -65,7 +65,7 @@ RUN mkdir /notebooks && chown $NB_UID:root /notebooks && chmod 1777 /notebooks
 
 ADD WineMap.ipynb /notebooks
 
-ADD wine_no_des.csv /notebooks
+ADD wineData.csv /notebooks
 
 ADD PostgresqlWineMap.ipynb /notebooks
 
