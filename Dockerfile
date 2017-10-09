@@ -72,7 +72,7 @@ ADD wineData.csv /notebooks
 
 ADD PostgresqlWineMap.ipynb /notebooks
 
-ADD postgresql-42.1.4.jar /
+ADD postgresql-42.1.4.jar /opt
 
 EXPOSE 8888
 
