@@ -54,10 +54,13 @@ RUN yum install -y curl wget java-headless bzip2 gnupg2 sqlite3 \
     && conda remove --quiet --yes --force qt pyqt \
     && conda remove --quiet --yes --force --feature mkl ; conda clean -tipsy
 
+ADD postgresql-42.1.4.jar /opt
 
 ENV PATH /opt/conda/bin:$PATH
 
 ENV SPARK_HOME /opt/spark
+
+ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
 
 # Add a notebook profile.
 
@@ -68,6 +71,8 @@ ADD WineMap.ipynb /notebooks
 ADD wineData.csv /notebooks
 
 ADD PostgresqlWineMap.ipynb /notebooks
+
+ADD postgresql-42.1.4.jar /
 
 EXPOSE 8888
 
