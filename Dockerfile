@@ -76,6 +76,8 @@ ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
 
 #RUN ./bin/pyspark --packages org.postgresql:postgresql:42.1.1
 
+RUN spark-shell --driver-class-path org.postgresql:postgresql:42.1.1
+
 EXPOSE 8888
 
 RUN mkdir -p -m 700 /home/$NB_USER/.jupyter/ && \
