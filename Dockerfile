@@ -29,7 +29,6 @@ RUN yum install -y curl wget java-headless bzip2 gnupg2 sqlite3 \
     && yum install -y gcc gcc-c++ glibc-devel \
     && /opt/conda/bin/conda install --quiet --yes python=$NB_PYTHON_VER 'nomkl' \
 			    'ipywidgets=5.2*' \
-			    'matplotlib=1.5*' \
 			    'scipy=0.17*' \
 			    'seaborn=0.7*' \
 			    'cloudpickle=0.1*' \
