@@ -64,8 +64,6 @@ ENV SPARK_HOME /opt/spark
 
 RUN mkdir /notebooks && chown $NB_UID:root /notebooks && chmod 1777 /notebooks
 
-ADD WineMap.ipynb /notebooks
-
 ADD wineData.csv /notebooks
 
 ADD PostgresqlWineMap.ipynb /notebooks
