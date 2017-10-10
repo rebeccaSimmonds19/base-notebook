@@ -76,7 +76,7 @@ ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
 
 #RUN ./bin/pyspark --packages org.postgresql:postgresql:42.1.1
 
-RUN spark-submit --driver-class-path org.postgresql:postgresql:42.1.1
+RUN spark-1.5.1-bin-hadoop2.6/bin/spark-shell --packages org.postgresql:postgresql:42.1.1
 
 EXPOSE 8888
 
