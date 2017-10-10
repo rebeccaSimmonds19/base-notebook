@@ -74,7 +74,7 @@ ADD postgresql-42.1.4.jar /opt
 
 ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
 
-RUN ./bin/spark-shell --packages org.postgresql:postgresql:42.1.1
+RUN ./bin/pyspark --packages org.postgresql:postgresql:42.1.1
 
 EXPOSE 8888
 
