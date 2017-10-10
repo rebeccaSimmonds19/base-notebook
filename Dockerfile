@@ -60,8 +60,6 @@ ENV PATH /opt/conda/bin:$PATH
 
 ENV SPARK_HOME /opt/spark
 
-ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
-
 # Add a notebook profile.
 
 RUN mkdir /notebooks && chown $NB_UID:root /notebooks && chmod 1777 /notebooks
@@ -73,6 +71,10 @@ ADD wineData.csv /notebooks
 ADD PostgresqlWineMap.ipynb /notebooks
 
 ADD postgresql-42.1.4.jar /opt
+
+ENV SPARK_CLASSPATH /opt/postgresql-42.1.4.jar
+
+RUN ./bin/spark-shell --packages org.postgresql:postgresql:42.1.1
 
 EXPOSE 8888
 
